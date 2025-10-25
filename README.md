@@ -1,1 +1,1 @@
-# sub-pms
+# pms-hotel-management
