@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 25, 2025 at 02:09 AM
+-- Generation Time: Oct 26, 2025 at 03:53 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -226,13 +226,14 @@ CREATE TABLE `room` (
 --
 
 INSERT INTO `room` (`RoomID`, `UserID`, `RoomNumber`, `RoomType`, `GuestCapacity`, `Rate`, `RoomStatus`, `LastClean`, `LastMaintenance`, `FloorNumber`) VALUES
-(2, 1, 202, 'Penthouse Suite', '4–6 guests', 123.02, 'Needs Cleaning', NULL, NULL, 2),
+(2, 1, 202, 'Standard Room', '1–2 guests', 123.02, 'Needs Cleaning', NULL, NULL, 2),
 (5, 1, 203, 'Deluxe Room', '2–3 guests', 120.00, 'Needs Cleaning', NULL, NULL, 2),
 (6, 1, 402, 'Penthouse Suite', '4–6 guests', 230.00, 'available', NULL, NULL, 4),
 (17, 1, 404, 'Deluxe Room', '2–3 guests', 66.00, 'maintenance', NULL, NULL, 4),
 (19, 1, 223, 'Penthouse Suite', '4–6 guests', 2.00, 'available', NULL, NULL, 2),
 (20, 1, 407, 'Standard Room', '1–2 guests', 2.00, 'occupied', NULL, NULL, 4),
-(21, 1, 244, 'Deluxe Room', '2–3 guests', 2.00, 'maintenance', NULL, NULL, 2);
+(21, 1, 244, 'Deluxe Room', '2–3 guests', 2.00, 'maintenance', NULL, NULL, 2),
+(24, 1, 501, 'Deluxe Room', '2–3 guests', 230.00, 'Reserved', NULL, NULL, 5);
 
 -- --------------------------------------------------------
 
@@ -259,12 +260,14 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`UserID`, `Fname`, `Lname`, `Mname`, `Birthday`, `AccountType`, `Username`, `Password`, `EmailAddress`, `Shift`, `Address`) VALUES
-(1, 'vincew', 'vargas', 'gonzales', '2025-10-01', 'admin', 'admin', '$2y$10$DVZR.vQA1KJThRDLAp9O0.7yd7xDOpW8UacsBskBk16Fg1APyRv7a', 'vincevargas90@gmail.com', 'Night', 'asd'),
-(6, 'asd', 'asd', 'asd', '2014-03-25', 'housekeeping_manager', 'housekeeping', '$2y$10$dshhvB8tZswOVgvfEZCXYeweeNdaANbmNNMzZ9hEwt6mptERiAN2C', 'dayvoice993@gmail.com', 'Morning', 'asdsd'),
-(7, 'gg', 'gg', 'gg', '2016-04-25', 'maintenance_manager', 'maintenance', '$2y$10$oYcrQxYqMdlEF2B7FvGh1ut1Wcui9QvrnX05XkwyZvobBdxi0I/kK', 'farmday96@gmail.com', 'Afternoon', 'asd'),
-(8, 'tt', 'tt', 'tt', '2019-03-25', 'parking_manager', 'parking', '$2y$10$PA.YXB4esV6OfFgrQvk1SOWsnnA1gLKSsx63D.yN/24uNJhFHhcqm', 'farmersday96@gmail.com', 'Night', 'asd'),
-(9, 'dd', 'dd', 'dd', '2020-03-25', 'housekeeping_staff', 'hstaff', '$2y$10$.g51qyaIKHXHtRAOiO1FuOs55S9DBmDAn1Z/0bi.dJohXSsvFGI9W', 'da@gmail.com', 'Morning', 'asd'),
-(10, 'asd', 'asd', 'asd', '2023-03-25', 'maintenance_staff', 'mstaff', '$2y$10$qZ6MD8qszXTpWKx7Ee5Thu3QTT35yjH0Jf1GONOKelBKYW0qAtskC', 'sda@gmail.com', 'Afternoon', 'asd');
+(1, 'Wilms', 'Bags', 'Tite', '2005-09-08', 'admin', 'admin', '$2y$10$tFkFJ9ec3OrZTqAehu421OLSNA3cI8LM4FaX21ny3Q/5BoKBXfsu6', 'bagayan.johnwilmer.timaan@gmail.com', 'Night', 'asd'),
+(6, 'asd', 'asd', 'qww', '2014-03-25', 'housekeeping_manager', 'housekeeping', '$2y$10$CJJ9MT3wuh.RB6gQWM5TN.CLt2sny7O1BeUmAf3yjZ11CD3S1f99K', 'dayvoice993@gmail.com', 'Morning', 'asdsd'),
+(7, 'gg', 'gg', 'gg', '2016-04-25', 'maintenance_manager', 'maintenance', '$2y$10$Qr8n1qqwDN19Sy9qArIw1uaSljgUL5i.2FOt5JEjIBUsC9a7zEDWi', 'garabiag.arjay04@gmail.com', 'Afternoon', 'asd'),
+(8, 'tt', 'tt', 'tt', '2019-03-25', 'parking_manager', 'parking', '$2y$10$QWZY.tx3h03AbVMnBeAUYusqSVa.UesM0g29tFn.qL/7M1ylZrgvO', 'farmersday96@gmail.com', 'Night', 'asd'),
+(9, 'dd', 'dd', 'dd', '2020-03-25', 'housekeeping_staff', 'hstaff', '$2y$10$c1xhsoAmkquyE6hvTZvIMOzaxpDj5aLTcXKKNcsqvj/fo2OVUKaW6', 'da@gmail.com', 'Morning', 'asd'),
+(10, 'asd', 'asd', 'asd', '2023-03-25', 'maintenance_staff', 'mstaff', '$2y$10$TDu.Jb0HEajidUsDTbuOvutInRB163Xb64A2xHkcG3SUNm7eWgoVS', 'sda@gmail.com', 'Afternoon', 'asd'),
+(11, 'haha', 'hehe', 'huhu', '2025-10-11', 'admin', 'admin12', '$2y$10$a0R7zDlByaTpOw/EzYnHpOGUH3wisHehr.iwuWFQeqcYHd9hLZnni', 'johnwilmerbagayan@gmail.com', 'Morning', 'qwdefrsdtty6u7i'),
+(12, 'gege', 'gaga', 'gogo', '2025-10-11', 'inventory_manager', 'admin123', '$2y$10$a0R7zDlByaTpOw/EzYnHpOGUH3wisHehr.iwuWFQeqcYHd9hLZnni', 'johnwilmerbagayan@gmail.com', 'Morning', 'qwdefrsdtty6u7i');
 
 -- --------------------------------------------------------
 
@@ -564,13 +567,13 @@ ALTER TABLE `rate`
 -- AUTO_INCREMENT for table `room`
 --
 ALTER TABLE `room`
-  MODIFY `RoomID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `RoomID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `UserID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `vehiclecategory`
